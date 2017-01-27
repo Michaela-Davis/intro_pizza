@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Michaela's Pizzeria</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <!-- Latest compiled and minified jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
@@ -10,9 +12,101 @@
 
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/scripts.js"></script>
-    <title></title>
   </head>
   <body>
+    <div class="container">
+      <div class="page-wrapper">
+        <h1>Michaela's Pizzeria</h1>
+        <h3>Create a custom pizza that will be "ready" in seconds!</h3>
+        <!-- FORM BEGIN -->
+        <form class="pizza-form">
 
+          <!-- Size Options: radio buttons: 1)Small 2)Large 3)Extra-Large -->
+          <div class="form-group well">
+            <div class="row">
+              <h2 class="left-headers">Sizes:</h2>
+              <div class="col-sm-3">
+              </div>
+              <div class="col-sm-3">
+                <label for="size"><input id="small" class="form-control size" type="radio" name="small-large-xlarge" value="small">Small <br>10"<br>$8.00</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="size"><input id="large" class="form-control size" type="radio" name="small-large-xlarge" value="large">Large<br>14"<br>$14.00</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="size"><input id="xlarge" class="form-control size" type="radio" name="small-large-xlarge" value="xlarge">Extra Large<br>16"<br>$17.00</label>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- Topping Options: checkboxes: 1)Cheese 2)Meat 3)Vegetables -->
+          <div class="form-group well" id="toppings-well">
+            <h2 class="left-headers">Toppings:</h2>
+
+            <!-- Cheese Options: $.75 each: checkboxes: 1)Mozzarella 2)Cheddar -->
+            <div class=" row form-group well" id="cheese-well">
+              <div class="col-sm-4">
+                <h3 id="cheese-header" class="all-topping-headers">Cheese <br>($.75 each)</h3>
+              </div>
+              <div class="col-sm-3">
+                <label for="size"><input id="mozzarella" class="form-control cheese" type="checkbox" name="cheese" value="mozzarella">Mozzarella</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="size"><input id="large" class="form-control size" type="checkbox" name="cheese" value="large">Cheddar</label>
+              </div>
+            </div>
+
+            <!-- Meat Options: $1.50 each: checkboxes: 1)Pepperoni 2)Bacon 3)Salami -->
+            <div class=" row form-group well" id="meat-well">
+              <div class="col-sm-3">
+                <h3 class="all-topping-headers">Meat<br>($1.50 each)</h3>
+              </div>
+              <div class="col-sm-3">
+                <label for="meat"><input id="pepperoni" class="form-control meat" type="checkbox" name="meat" value="pepperoni">Pepperoni</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="meat"><input id="bacon" class="form-control meat" type="checkbox" name="meat" value="bacon">Bacon</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="meat"><input id="salami" class="form-control meat" type="checkbox" name="meat" value="salami">Salami</label>
+              </div>
+            </div>
+
+            <!-- Vegetable Options: $1.00 each: checkboxes: 1)Artichokes 2)Black Olives 3)Fresh Basil 4)Mushrooms 5)Pineapple 6)Sun-dried Tomatoes -->
+            <div class=" row form-group well" id="vegetable-well">
+              <div class="col-sm-3">
+                <h3 class="all-topping-headers">Vegetables<br>($1.00 each)</h3>
+              </div>
+              <div class="col-sm-3">
+                <label for="vegetable"><input id="artichokes" class="form-control vegetable" type="checkbox" name="vegetable" value="artichokes">Artichokes</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="vegetable"><input id="black-olives" class="form-control vegetable" type="checkbox" name="vegetable" value="black-olives">Black Olives</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="vegetable"><input id="fresh-basil" class="form-control vegetable" type="checkbox" name="vegetable" value="fresh-basil">Fresh Basil</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="vegetable"><input id="mushrooms" class="form-control vegetable" type="checkbox" name="vegetable" value="mushrooms">Mushrooms</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="vegetable"><input id="pineapple" class="form-control vegetable" type="checkbox" name="vegetable" value="pineapple">Pineapple</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="vegetable"><input id="sun-dried-tomatoes" class="form-control vegetable" type="checkbox" name="vegetable" value="sun-dried-tomatoes">Sun-dried Tomatoes</label>
+              </div>
+            </div>
+
+
+          </div>
+  <!-- CALCUALTE PRICE BUTTON -->
+          <button type="submit" name="calculate-price-button" id="calculate-price-button">Calculate Price</button>
+        <!-- FORM END -->
+        </form>
+      <!-- page wrapper div   -->
+      </div>
+    <!-- container div -->
+    </div>
   </body>
 </html>

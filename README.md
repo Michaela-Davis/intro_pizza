@@ -20,10 +20,10 @@ _Does not require a server or setting up a database._
 
 ## Specifications
 * The program allows the user to choose toppings and the size of pizza they'd like to order.
-  * Input Example: user checks boxes for small, mozzarella, pepperoni, bacon, fresh basil then hits submit button
-  * Output Example: order for a small pizza with mozzarella, pepperoni, bacon,  and fresh basil appears
+  * Input Example: user checks boxes for Small, Mozzarella, Pepperoni, Bacon, Fresh Basil then hits submit button
+  * Output Example: order for a Small pizza with Mozzarella, Pepperoni, Bacon,  and Fresh Basil appears
 * The program allows the user to see the cost of their pizza depending on their selections.
-  * Input Example: small, mozzarella, pepperoni, bacon, fresh basil, sun-dried tomatoes
+  * Input Example: Small, Mozzarella, Pepperoni, Bacon, Fresh Basil, Sun-dried Tomatoes
   * Output Example: $14
 
 ## Known Bugs

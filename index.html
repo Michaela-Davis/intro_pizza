@@ -19,7 +19,7 @@
         <h1>Michaela's Pizzeria</h1>
         <h3>Create a custom pizza that will be "ready" in seconds!</h3>
         <!-- FORM BEGIN -->
-        <form class="pizza-form">
+        <form id="pizza-form">
 
           <!-- Size Options: radio buttons: 1)Small 2)Large 3)Extra-Large -->
           <div class="form-group well">
@@ -46,14 +46,17 @@
 
             <!-- Cheese Options: $.75 each: checkboxes: 1)Mozzarella 2)Cheddar -->
             <div class=" row form-group well" id="cheese-well">
-              <div class="col-sm-4">
+              <div class="col-sm-3">
                 <h3 id="cheese-header" class="all-topping-headers">Cheese <br>($.75 each)</h3>
               </div>
               <div class="col-sm-3">
-                <label for="size"><input id="mozzarella" class="form-control cheese" type="checkbox" name="cheese" value="mozzarella">Mozzarella</label>
+                <label for="cheese"><input id="mozzarella" class="form-control cheese" type="checkbox" name="cheese" value="mozzarella">Mozzarella</label>
               </div>
               <div class="col-sm-3">
-                <label for="size"><input id="large" class="form-control size" type="checkbox" name="cheese" value="large">Cheddar</label>
+                <label for="cheese"><input id="parmesan" class="form-control cheese" type="checkbox" name="cheese" value="parmesan">Parmesan</label>
+              </div>
+              <div class="col-sm-3">
+                <label for="cheese"><input id="cheddar" class="form-control cheese" type="checkbox" name="cheese" value="cheddar">Cheddar</label>
               </div>
             </div>
 

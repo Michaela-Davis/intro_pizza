@@ -7,19 +7,20 @@ function Pizza(size, cheese, meat, vegetable) {
   this.vegetable = vegetable;
 }
 
-// if (size === "small") {
-//   var sizePrice = 10
-// } else if (size === "large") {
-//   var sizePrice = 14
-// } else if (size === "xlarge") {
-//   var sizePrice = 16
-// }
-
 Pizza.prototype.calculatePrice = function() {
-  return ((cheese.length * .75) + (meat.length * 1.5) + (vegetable.length));
-}
+  var toppingPrice = ((this.cheese.length * .75) + (this.meat.length * 1.5) + (this.vegetable.length));
 
-// var pizzaOrder = []
+  if (this.size === "small") {
+    var sizePrice = 10;
+  } else if (this.size === "large") {
+    var sizePrice = 14;
+  } else if (this.size === "xlarge") {
+    var sizePrice = 16;
+  }
+
+  var price = toppingPrice + sizePrice;
+  return price;
+}
 
 // FRONT-END USER LOGIC
 
@@ -31,33 +32,26 @@ $(document).ready(function() {
     event.preventDefault();
 
     var size = $("input[name='small-large-xlarge']:checked").val();
-    console.log(size);
 
     var cheese = []
     $("input:checkbox[name=cheese]:checked").each(function() {
         cheese.push($(this).val());
     });
-    console.log(cheese);
 
     var meat = []
     $("input:checkbox[name=meat]:checked").each(function() {
         meat.push($(this).val());
     });
-    console.log(meat);
 
     var vegetable = []
     $("input:checkbox[name=vegetable]:checked").each(function() {
         vegetable.push($(this).val());
     });
-    console.log(vegetable);
-
-    console.log((cheese.length * .75) + (meat.length * 1.5) + (vegetable.length));
 
     // Show price well after submit/calculate-price
     $(".calculate-price-well").show();
 
-
-    $("#price").text(calculate-price);
-
+    var pizzaOrder = new Pizza(size, cheese, meat, vegetable);
+    $("#price").text(pizzaOrder.calculatePrice());
   });
 });

@@ -16,8 +16,7 @@ function Pizza(size, cheese, meat, vegetable) {
 // }
 
 Pizza.prototype.calculatePrice = function() {
-  return (this.cheese.length * .75) + (this.meat.length * 1.5) + (this.vegetable.length);
-  console.log((this.cheese.length * .75) + (this.meat.length * 1.5) + (this.vegetable.length));
+  return ((cheese.length * .75) + (meat.length * 1.5) + (vegetable.length));
 }
 
 // var pizzaOrder = []
@@ -52,13 +51,13 @@ $(document).ready(function() {
     });
     console.log(vegetable);
 
+    console.log((cheese.length * .75) + (meat.length * 1.5) + (vegetable.length));
+
     // Show price well after submit/calculate-price
     $(".calculate-price-well").show();
 
-    // var price = new Pizza (size, cheese, meat, vegetable);
-    // pizzaOrder.calculatePrice(price);
-    //
-    // $("#price").text(price);
+
+    $("#price").text(calculate-price);
 
   });
 });

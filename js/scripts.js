@@ -7,11 +7,27 @@ function Pizza(size, cheese, meat, vegetable) {
   this.vegetable = vegetable;
 }
 
+// if (size === "small") {
+//   var sizePrice = 10
+// } else if (size === "large") {
+//   var sizePrice = 14
+// } else if (size === "xlarge") {
+//   var sizePrice = 16
+// }
 
+Pizza.prototype.calculatePrice = function() {
+  return (this.cheese.length * .75) + (this.meat.length * 1.5) + (this.vegetable.length);
+  console.log((this.cheese.length * .75) + (this.meat.length * 1.5) + (this.vegetable.length));
+}
+
+// var pizzaOrder = []
 
 // FRONT-END USER LOGIC
 
 $(document).ready(function() {
+  // Hide price well
+  $(".calculate-price-well").hide();
+
   $("form#pizza-form").submit(function(event) {
     event.preventDefault();
 
@@ -36,8 +52,13 @@ $(document).ready(function() {
     });
     console.log(vegetable);
 
+    // Show price well after submit/calculate-price
+    $(".calculate-price-well").show();
 
-
+    // var price = new Pizza (size, cheese, meat, vegetable);
+    // pizzaOrder.calculatePrice(price);
+    //
+    // $("#price").text(price);
 
   });
 });
